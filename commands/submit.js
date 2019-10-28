@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const ReplaysController = require("../controller/replays-controller");
 
 module.exports = class SubmitCommand {
     
@@ -11,5 +12,11 @@ module.exports = class SubmitCommand {
 
     run(client, msg, args) {
         msg.reply('Submittting...');
+        (async () => {
+            console.log("RESULT: " + x);
+            var x = await ReplaysController.postReplay({"data:": "lol"});
+            
+        })();
     }
+
 }
