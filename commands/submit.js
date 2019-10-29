@@ -65,7 +65,7 @@ module.exports = class SubmitCommand {
         .addField('K/D', kdStr, true)
         .setTimestamp(new Date(replay.timestamp))
         .setFooter(replay.turns + ' turns', config.embedIconUrl));
-    
+    }
     
     run(client, msg, args) {
         const id = parseInt(args[0]);
@@ -88,4 +88,5 @@ module.exports = class SubmitCommand {
             }
         })();
     }
+
 }

@@ -1,7 +1,10 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
-const config = require('./config.json');   
+const client = new Discord.Client();   
 const { CommandHandler } = require('djs-commands');
+
+const config = require('./config.json');
+const MessageUtils = require("./utils/messageutils");
+const Wc3StatsController = require('./controller/wc3stats-controller');
 
 const CH = new CommandHandler({
     folder: __dirname + "/commands/",
@@ -26,9 +29,29 @@ client.on('message', msg => {
     // args = ["Is", "this", "the", "real", "life?"]
     const args = msg.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
-    
-    const foundCommand = CH.getCommand('!' + command);
 
+    // Handle uploaded files
+    if (msg.attachments.size > 0) {
+        let attached = msg.attachments.array()[0];
+        let fname = attached.filename;
+        if (fname.substring(fname.length - 4, fname.length) !== ".w3g") { 
+            msg.channel.send(MessageUtils.error("Invalid file format. Can only read w3g files."));
+        } else {
+            Wc3StatsController.postReplayAttachment(attached)
+            .then(json => {
+                const SubmitCommand = require('./commands/submit');
+                new SubmitCommand().run(client, msg, [json.body.id]); 
+            })
+            .catch(err => {
+                msg.channel.send(MessageUtils.error("Upload to wc3stats.com failed"));
+            });
+        }
+        //msg.delete();
+    }
+
+
+    // Execute command if it exists 
+    const foundCommand = CH.getCommand(config.prefix + command);
     if (!foundCommand) 
         return;
     try {

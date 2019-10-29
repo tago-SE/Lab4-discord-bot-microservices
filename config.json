@@ -4,6 +4,9 @@
     "embedcolor": "#f5f17a",
     "embedIconUrl": "https://cdn.discordapp.com/attachments/413107471222308864/614788523526193193/risk_avatar_trees_big.png",
     
+    "kd_decmial": 2,
+    "wl_decimal": 1,
+
     "maps": [
         {
             "map": "Risk Reforged",
