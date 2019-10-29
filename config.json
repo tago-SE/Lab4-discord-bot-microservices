@@ -1,4 +1,13 @@
 {
     "token": "NjEyMjE4MzEyMTAwNjc1NTg1.XbYncQ.C3YCAHzOLDNsJHf1V9QOofS4VgE",
-    "prefix": "!"
+    "prefix": "!",
+    "embedcolor": "#f5f17a",
+    "embedIconUrl": "https://cdn.discordapp.com/attachments/413107471222308864/614788523526193193/risk_avatar_trees_big.png",
+    
+    "maps": [
+        {
+            "map": "Risk Reforged",
+            "versions": ["1.54c", "1.54d", "1.54b", "2.0b", "2.0e", "2.0c", "2.0d", "2.0f"]
+        }
+    ]
 }
