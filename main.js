@@ -63,3 +63,9 @@ client.on('message', msg => {
 });
 
 client.login(config.token);
+
+// Keep track of our socket connection
+//var socket;
+
+const SocketController = require('./controller/socket-controller');
+SocketController.init(client, 'http://localhost:3001');
