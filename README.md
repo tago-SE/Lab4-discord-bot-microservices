@@ -35,3 +35,14 @@ Pushing the image to the dockerhub with the tag 'latest':
 public https://hub.docker.com/r/pudg0/wc3stats-js
 
 private: https://cloud.docker.com/u/pudg0/repository/docker/pudg0/wc3stats-js
+
+
+# Crate a new discord application and invite it to your guild 
+
+1) Create a New Application: https://discordapp.com/developers/applications/
+
+2) Select the "Bots" menu and copy the token into your settings file
+
+3) Invite the bot to your discord guild:
+https://github.com/jagrosh/MusicBot/wiki/Adding-Your-Bot-To-Your-Server
+
