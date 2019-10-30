@@ -4,8 +4,16 @@
     "embedcolor": "#f5f17a",
     "embedIconUrl": "https://cdn.discordapp.com/attachments/413107471222308864/614788523526193193/risk_avatar_trees_big.png",
     
-    "kd_decmial": 2,
-    "wl_decimal": 1,
+
+    "scoreboard": {
+       "channelId": "612532804844126238",
+       "soloTitle": "Risk Solo League",
+       "teamTitle": "Risk Team League",
+       "ffaTitle": "Risk FFA League",
+
+       "kd_decmial": 2,
+        "wl_decimal": 1
+    },
 
     "maps": [
         {

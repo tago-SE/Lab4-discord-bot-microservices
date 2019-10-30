@@ -12,7 +12,8 @@ module.exports = class SocketController {
         var socket = io.connect(url);
 
         socket.on('scoreboard', function(data) {
-            console.log(data);
+            const ScoreboardHandler = require("../handlers/scoreboard-handler");
+            ScoreboardHandler.update(client, data);
         });
     }
 
