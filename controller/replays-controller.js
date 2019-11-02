@@ -27,4 +27,27 @@ module.exports = class ReplaysController {
                 })
         });
     }
+
+    static searchReplayByUser(name) {
+        var data = { 
+            "name": name.toLowerCase(),
+        }; 
+        return new Promise(function (resolve, reject) {
+            request.get(
+                server.url + "/api.replays/player",
+                { json: data }, 
+                (error, res, body) => {
+                    if (error) {
+                        console.error(error)
+                        reject(error);
+                    } else {
+                        console.log(`statusCode: ${res.statusCode}`)
+                        console.log(body)
+                        resolve(body);
+                    }
+                }
+            )
+        });
+    }
+
 }

@@ -30,4 +30,26 @@ module.exports = class UsersController {
             )
         });
     }
+
+    static searchForUsersByName(search) {
+        var data = { 
+            "name": search,
+        }; 
+        return new Promise(function (resolve, reject) {
+            request.get(
+                server.url + "/api.users/search",
+                { json: data }, 
+                (error, res, body) => {
+                    if (error) {
+                        console.error(error)
+                        reject(error);
+                    } else {
+                        console.log(`statusCode: ${res.statusCode}`)
+                        console.log(body)
+                        resolve(body);
+                    }
+                }
+            )
+        });
+    }
 }

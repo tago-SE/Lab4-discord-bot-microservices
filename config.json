@@ -15,6 +15,21 @@
         "wl_decimal": 1
     },
 
+    "Result": {
+        "Risk_Reforged": {
+            "col0": {
+
+            }, 
+
+            "col1": {
+
+            }, 
+            "col2": {
+                
+            }
+        }
+    },
+
     "maps": [
         {
             "map": "Risk Reforged",
