@@ -1,0 +1,4 @@
+{
+    "url": "https://wc3stats-backend.azurewebsites.net",
+    "url_socket": "https://wc3stats-ws-server.azurewebsites.net/"
+}
