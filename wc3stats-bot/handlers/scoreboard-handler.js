@@ -69,15 +69,8 @@ module.exports = class ScoreboardHandler {
                 for (var i = 0; i < messages.length; i++) {
                     if (messages[i].embeds !== null && messages[i].embeds.length > 0) {
                         if (messages[i].embeds[0].title === title) {
-                            //if (names.length > 0) {
-                           //     console.log("edited: " + i );
-                            //     messages[i].edit(embed);
-                            //}
-                            //else {
-                                console.log("Deleted old scoreboard");
-                                messages[i].delete();
-                            //}
-                           // return;
+                            console.log("Deleted old scoreboard");
+                            messages[i].delete();
                         }
                     }
                 }
