@@ -16,7 +16,7 @@
     "dateformat": "^3.0.3",
     "discord.js": "^11.5.1",
     "djs-commands": "^1.2.2",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
     "socket.io": "^2.3.0",
